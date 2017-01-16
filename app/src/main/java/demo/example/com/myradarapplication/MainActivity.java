@@ -22,8 +22,12 @@ public class MainActivity extends AppCompatActivity {
 //注释
         initView();
         initData();
-        
+
         newBranch0();
+        newBranch1();
+    }
+
+    private void newBranch1() {
     }
 
     private void newBranch0() {
