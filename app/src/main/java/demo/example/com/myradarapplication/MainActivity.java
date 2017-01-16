@@ -24,12 +24,7 @@ public class MainActivity extends AppCompatActivity {
         initData();
 
         newBranch0();
-        newBranch1();
     }
-
-    private void newBranch1() {
-    }
-
     private void newBranch0() {
     }
 
