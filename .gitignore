@@ -1,3 +1,12 @@
+
+*build
+gradle
+.gradle
+/.idea
+*local.properties
+*.iml
+*proguard-rules.pro
+gradle.properties
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
