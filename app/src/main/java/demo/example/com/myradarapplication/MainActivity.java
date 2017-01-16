@@ -22,6 +22,11 @@ public class MainActivity extends AppCompatActivity {
 //注释
         initView();
         initData();
+        commit0();
+        
+    }
+
+    private void commit0() {
     }
 
     /**
