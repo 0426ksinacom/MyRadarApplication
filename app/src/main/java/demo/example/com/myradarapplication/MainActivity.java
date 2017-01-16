@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private RadarView radarView;
 
     private int addviewCountTag = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,40 +22,37 @@ public class MainActivity extends AppCompatActivity {
 
 
 //注释
-        initView( );
-
+        initView();
         initData();
 
 
     }
 
-    /** Radar */
+    /**
+     * Radar
+     */
     public void RadarStop() {
-
         if (radarView != null) {
             radarView.stop();
         }
+    }
 
-    };
-
-    /** Radar */
+    /**
+     * Radar
+     */
     public void RadarStart() {
         if (radarView != null) {
             radarView.start();
         }
-
-    };
-
-    private void initData() {
-
     }
 
-    private void initView( ) {
+    private void initData() {
+    }
 
-        btn = (ImageView)  findViewById(R.id.button);
+    private void initView() {
+        btn = (ImageView) findViewById(R.id.button);
         radarView = (RadarView) findViewById(R.id.seismicwaveview);
         radarView.start();
-
         radarView.setViewWidth(140);
         imageView1 = (ImageView) findViewById(R.id.imageView1);
         imageView1.setOnClickListener(new View.OnClickListener() {
@@ -64,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
                 radarView.removeOneView();
             }
         });
-
         imageView1.postDelayed(new Runnable() {
 
             @Override
@@ -98,21 +95,15 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         if (v.getTag() != null) {
                             int pos = (Integer) (v.getTag());
-                            Toast.makeText(MainActivity.this,"position="+pos,Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "position=" + pos, Toast.LENGTH_SHORT).show();
                         }
-
                     }
                 });
-
-
                 radarView.addViewlist(button);
-
-
-
                 // ImageLoader.getInstance().displayImage("http://s17.mogucdn.com/p1/150711/14dhcd_ie2wimjumm3domrvgizdambqhayde_640x960.jpg_468x468.jpg",
                 // iv, options);
                 button.setSpimg("http://v1.qzone.cc/skin/201512/21/13/00/5677878225e8d943.jpg%21600x600.jpg");
-                button.setName("@我 "+addviewCountTag);
+                button.setName("@我 " + addviewCountTag);
 
                 Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.buttongobig);
                 button.startAnimation(animation);
@@ -125,6 +116,5 @@ public class MainActivity extends AppCompatActivity {
                 // }
             }
         });
-
     }
 }
